@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    hikari:
+      driverClassName: org.h2.Driver
+      username: sa
+      password:
+      jdbc-url: jdbc:h2:mem:test
+  exposed:
+    show-sql: true
