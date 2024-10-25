@@ -12,6 +12,7 @@ val exposedVersion = "0.55.0"
 val kotestVersion = "5.9.1"
 val kotestSpringExtensionVersion = "1.3.0"
 val mockkVersion = "1.13.13"
+val byteBuddyVersion = "1.15.7"
 
 java {
     toolchain {
@@ -32,6 +33,8 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
 
     implementation("com.h2database:h2")
+
+    implementation("net.bytebuddy:byte-buddy:$byteBuddyVersion")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")

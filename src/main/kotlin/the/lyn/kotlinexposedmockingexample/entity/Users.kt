@@ -11,10 +11,12 @@ object Users : LongIdTable(name = "users") {
     val age = integer("age")
 }
 
-class User(id: EntityID<Long>) : LongEntity(id) {
+open class User(id: EntityID<Long>) : LongEntity(id) {
     companion object : LongEntityClass<User>(Users)
 
     var userName by Users.userName
     var email by Users.email
     var age by Users.age
+
+    var nonDBProperty: Int = 0
 }
